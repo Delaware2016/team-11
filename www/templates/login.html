@@ -1,18 +1,23 @@
 <ion-view title="Login" id="page9">
-    <ion-content padding="true" class="has-header">
-        <form id="login-form1" class="list">
-            <ion-list id="login-list2">
-                <label class="item item-input" id="login-input1">
+  <ion-content padding="true" class="has-header" ng-controller = "AppCtrl">
+    <form id="login-form1" class="list">
+      <ion-list id="login-list2">
+        <label class="item item-input" id="login-input1">
                     <span class="input-label">Username</span>
                     <input type="text" placeholder="">
                 </label>
-                <label class="item item-input" id="login-input2">
+        <label class="item item-input" id="login-input2">
                     <span class="input-label">Password</span>
                     <input type="password" placeholder="">
                 </label>
-            </ion-list>
-            <div class="spacer" style="height: 40px;"></div>
-            <button id="login-button1" class="button button-stable  button-block" ng-click="logIn()">Log in</button>
-        </form>
-    </ion-content>
+      </ion-list>
+      <div class="spacer" style="height: 40px;"></div>
+      <button id="login-button1" class="button button-stable  button-block" ng-click="logIn()">Log in</button>
+      <label class="item">
+        <button class="button button-block button-positive" ng-click="fbLogin()">
+          Login with Facebook
+        </button>
+      </label>
+    </form>
+  </ion-content>
 </ion-view>
