@@ -14,7 +14,7 @@ angular.module('app.routes', [])
     url: '/newsfeed',
     views: {
       'tab1': {
-        templateUrl: 'templates/newsfeed.html',
+        templateUrl: 'templates/newsFeed.html',
         controller: 'newsfeedCtrl'
       }
     }
