@@ -20,6 +20,12 @@ angular.module('app.controllers', [])
         $scope.items.push(item)
       }
     });
+    $scope.fundData = [{
+            "fund": "General",
+            "goal": "10000",
+            "raised": "4650",
+            "link": "#general"
+    }];
   }
 ])
 
