@@ -33,7 +33,11 @@ function ($scope, $stateParams, $http) {
         var item = {}
         item.values = data.volunteeringevents[i]
         item.str = "";
-        item.str = item.values.event_Name
+        item.name = item.values.event_Name
+        item.date = item.values.date
+        item.time = item.values.timeOf
+        
+
         console.log(item)
         $scope.items.push(item)
       }
