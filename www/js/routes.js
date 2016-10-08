@@ -40,6 +40,16 @@ angular.module('app.routes', [])
     }
   })
 
+  .state('tabsController.doublePoints', {
+  url: '/double-points/{charity}',
+  views: {
+    'tab4': {
+      templateUrl: 'templates/double-points.html',
+      controller: 'donateCtrl'
+    }
+  }
+})
+
   .state('tabsController', {
     url: '/page1',
     templateUrl: 'templates/tabsController.html',
