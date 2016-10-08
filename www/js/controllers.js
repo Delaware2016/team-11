@@ -53,16 +53,32 @@ angular.module('app.controllers', [])
 function ($scope, $stateParams, $http) {
   $scope.items = []
     $http.get('data/donate_data.json').success(function(data) {
+      var set = new Set()
+      var hashmap = {}
       for (var i in data.donationcharities) {
         var item = {}
         item.values = data.donationcharities[i]
-        item.str = "";
-        item.str = "item.values.charityName"
-        console.log(item)
+        item.str = item.values.charityName
+        set.add(item.values.passion)
+
+        if(hashmap[item.values.passion] === undefined) {
+          hashmap[item.values.passion] = []
+          hashmap[item.values.passion].push(item.str)
+        } else {
+          hashmap.push(item.str)
+        }
+
         $scope.items.push(item)
       }
-    });
 
+      $scope.passions = Array.from(set)
+      $scope.hashmap = hashmap
+      console.log(hashmap)
+      console.log($scope.passions)
+    });
+    
+    $scope.mySelect = "education";
+    $scope.testFunc = function(val) { console.log(val); $scope.charitySelect = $scope.hashmap[val][0] }
 }])
 
 .controller('menuCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller

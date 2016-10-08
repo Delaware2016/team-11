@@ -1,31 +1,31 @@
 <ion-view title="Donate" id="page4">
-    <ion-content padding="true" class="has-header">
-        <div id="donate-button-bar1" style="text-align:right;width:100%" class="button-bar">
-            <button id="donate-button3" class="button button-positive  button-block">$5</button>
-            <button id="donate-button4" class="button button-positive  button-block">$50</button>
-            <button id="donate-button5" class="button button-positive  button-block">$100</button>
-            <label class="item item-input" style = "background-color: #387ef5">
+  <ion-content padding="true" class="has-header">
+    <div id="donate-button-bar1" style="text-align:right;width:100%" class="button-bar">
+      <button id="donate-button3" class="button button-positive  button-block">$5</button>
+      <button id="donate-button4" class="button button-positive  button-block">$50</button>
+      <button id="donate-button5" class="button button-positive  button-block">$100</button>
+      <label class="item item-input" style="background-color: #387ef5">
                 <span style = "color: white" class="input-label">Other Amount: $</span>
                 <input style = "color:white" type="text">
             </label>
-        </div>
-        <form id="donate-form4" class="list">
-            <label class="item item-select" id="donate-select2" name="passionDropdown">
-                <span class="input-label">Passion</span>
-                <select>
-                    <option>{{category}}</option>
-                    <option>{{category}}</option>
-                    <option>{{category}}</option>
-                </select>
-            </label>
-            <label class="item item-select" id="donate-select3" name="charityDropdown">
-                <span class="input-label">Charities</span>
-                <select></select>
-            </label>
-            <label class="item item-input" id="donate-textarea1" name="donateComment">
-                <span class="input-label"></span><textarea placeholder="Leave a comment"></textarea>
-            </label>
-        </form>
-        <a ui-sref="tabsController.confirmDonation" id="donate-button6" class="button button-positive  button-block">Confirm</a>
-    </ion-content>
+    </div>
+    <form id="donate-form4" class="list">
+      <label class="item item-select" id="donate-select2" name="passionDropdown">
+          <span class="input-label">Passion</span>
+          <select ng-model="mySelect" ng-change="testFunc(mySelect)" ng-options ="passion for passion in passions"></select>
+        </label>
+
+
+      <label class="item item-select" id="donate-select3" name="charityDropdown">
+          <span class="input-label">Charities</span>
+          <select ng-model="charitySelect" ng-options = "charity for charity in hashmap[mySelect]"> </select>
+        </label>
+
+      <label class="item item-input" id="donate-textarea1" name="donateComment">
+          <span class="input-label"></span><textarea placeholder="Leave a comment"></textarea>
+        </label>
+
+    </form>
+    <a ui-sref="tabsController.confirmDonation" id="donate-button6" class="button button-positive  button-block">Confirm</a>
+  </ion-content>
 </ion-view>
