@@ -10,7 +10,7 @@ angular.module('app.routes', [])
 
 
 
-      .state('tabsController.newsfeed', {
+    .state('tabsController.newsfeed', {
     url: '/newsfeed',
     views: {
       'tab1': {
@@ -43,7 +43,7 @@ angular.module('app.routes', [])
   .state('tabsController', {
     url: '/page1',
     templateUrl: 'templates/tabsController.html',
-    abstract:true
+    abstract: true
   })
 
   .state('about', {
@@ -80,7 +80,7 @@ angular.module('app.routes', [])
     }
   })
 
-$urlRouterProvider.otherwise('/page1/newsfeed')
+  $urlRouterProvider.otherwise('/page1/newsfeed')
 
 
 
