@@ -1,12 +1,12 @@
 <ion-view title="Donate" id="page4">
   <ion-content padding="true" class="has-header">
     <div id="donate-button-bar1" style="text-align:right;width:100%" class="button-bar">
-      <button id="donate-button3" class="button button-positive  button-block">$5</button>
-      <button id="donate-button4" class="button button-positive  button-block">$50</button>
-      <button id="donate-button5" class="button button-positive  button-block">$100</button>
+      <button id="donate-button3" class="button button-positive  button-block" ng-click = "select5()">$5</button>
+      <button id="donate-button4" class="button button-positive  button-block" ng-class = "{button50: activated}" ng-click = "select50()">$50</button>
+      <button id="donate-button5" class="button button-positive  button-block" ng-click = "select100()">$100</button>
       <label class="item item-input" style="background-color: #387ef5">
                 <span style = "color: white" class="input-label">Other Amount: $</span>
-                <input style = "color:white" type="text">
+                <input ng-model = "customValue.test" style = "color:white" type="text" ng-change = "selectCustom()">
             </label>
     </div>
     <form id="donate-form4" class="list">
@@ -26,6 +26,6 @@
         </label>
 
     </form>
-    <a ui-sref="tabsController.confirmDonation" id="donate-button6" class="button button-positive  button-block">Confirm</a>
+    <a ng-href="/#/page1/donationConfirmation/{{selectedValue}}/{{charitySelect}}" id="donate-button6" class="button button-positive  button-block">Confirm</a>
   </ion-content>
 </ion-view>

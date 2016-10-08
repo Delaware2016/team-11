@@ -9564,6 +9564,10 @@ a.button {
   -webkit-transform: translate3d(0, 100%, 0);
   transform: translate3d(0, 100%, 0); }
 
+.clicked {
+  color:red;
+}
+
 .slide-in-up.ng-enter,
 .slide-in-up > .ng-enter {
   -webkit-transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 400ms;
@@ -9727,3 +9731,7 @@ a.button {
   opacity: 0;
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
+
+  .clicked {
+    color:red;
+  }

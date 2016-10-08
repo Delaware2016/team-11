@@ -71,7 +71,7 @@ angular.module('app.routes', [])
   })
 
   .state('tabsController.confirmDonation', {
-    url: '/donationConfirmation',
+    url: '/donationConfirmation/{amount}/{charityName}',
     views: {
       'tab3': {
         templateUrl: 'templates/confirmDonation.html',

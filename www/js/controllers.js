@@ -68,6 +68,11 @@ function ($scope, $stateParams, $http) {
           hashmap.push(item.str)
         }
 
+        if(item.values.id+"" === $stateParams.charity+"") {
+          $scope.mySelect = item.values.passion;
+          $scope.charitySelect = item.str;
+        }
+
         $scope.items.push(item)
       }
 
@@ -76,8 +81,30 @@ function ($scope, $stateParams, $http) {
       console.log(hashmap)
       console.log($scope.passions)
     });
-    $scope.mySelect = "education";
     $scope.testFunc = function(val) { console.log(val); $scope.charitySelect = $scope.hashmap[val][0] }
+    $scope.selectedValue = 5;
+
+    $scope.select5 = function() {
+      $scope.selectedValue = 5;
+      $scope.customValue.test = ''
+      $scope.button50 = false;
+    }
+
+    $scope.select50 = function() {
+      $scope.selectedValue = 50;
+      $scope.customValue.test = ''
+    }
+
+    $scope.select100 = function() {
+      $scope.selectedValue = 100;
+      $scope.customValue.test = ''
+    }
+
+    $scope.customValue = {}
+    $scope.selectCustom = function() {
+      $scope.selectedValue = $scope.customValue.test;
+      console.log($scope.selectedValue);
+    }
 
 }])
 
