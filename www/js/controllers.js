@@ -20,6 +20,13 @@ angular.module('app.controllers', [])
         $scope.items.push(item)
       }
     });
+
+    $scope.fundData = [{
+            "fund": "General",
+            "goal": "10000",
+            "raised": "4650",
+            "link": "#general"
+        }];
   }
 ])
 
@@ -47,11 +54,11 @@ angular.module('app.controllers', [])
   }
 ])
 
-.controller('donateCtrl', ['$scope', '$stateParams', '$http', '$window',
+.controller('donateCtrl', ['$scope', '$stateParams', '$http', '$window', '$location',
 // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams, $http, $window) {
+function ($scope, $stateParams, $http, $window, $location) {
   $scope.hashmap = {};
   $scope.items = [];
   $scope.passions = [];
@@ -80,7 +87,7 @@ function ($scope, $stateParams, $http, $window) {
         $scope.items.push(item)
       }
       console.log(set)
-      var newStupidArray = []
+      var newStupidArray = [] //I hate angular for this
       set.forEach(function(value) {
         newStupidArray.push(value)
       })
@@ -116,7 +123,9 @@ function ($scope, $stateParams, $http, $window) {
     }
 
     $scope.confirm = function() {
-      $window.location.href = '/#/page1/donationConfirmation';
+      var url = "http://" + $window.location.host + '/#/page1/donationConfirmation'
+      $window.location.href = url
+      console.log($window.location.href)
     }
 
 }])

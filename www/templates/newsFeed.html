@@ -1,12 +1,26 @@
 <ion-view title="NewsFeed" id="page2">
   <ion-content padding="true" class="has-header" ng-controller="newsfeedCtrl">
     <ion-list>
+      <!-- from https://codepen.io/markhillard/pen/KJojb -->
+      <div class="container" ng-app="progressApp">
+        <div class="fund" ng-repeat="give in fundData">
+          <h2>Fund: {{give.fund}}</h2>
+          <div class="progress">
+            <div class="bar" ng-style="{width:{{((give.raised / give.goal) * 100)}} + '%'}">
+              <!-- show calculated percentage if total amount raised is <= 100% -->
+              <span class="percent" ng-show="((give.raised / give.goal) * 100) <= 100">{{((give.raised / give.goal) * 100) | number:0}}%</span>
+              <!-- show maximum percentage if total amount raised is > 100% -->
+              <span class="percent" ng-show="((give.raised / give.goal) * 100) > 100">100%</span>
+            </div>
+          </div>
+          <span class="goal">Raised: {{give.raised | currency:"$":0}} &nbsp;&compfn;&nbsp; Goal: {{give.goal | currency:"$":0}}</span>
+        </div>
+      </div>
       <ion-item ng-repeat="item in items">
         <div class="card">
           <div class="item item-text-wrap">
             <a ng-href="#/page1/donate/{{item.values.id}}" class="item item-icon-right">
-              <i class="icon ion-home"></i>
-              {{item.str}}
+              <i class="icon ion-home"></i> {{item.str}}
             </a>
           </div>
         </div>
