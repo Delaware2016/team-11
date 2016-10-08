@@ -10,12 +10,22 @@ angular.module('app.routes', [])
     
   
 
-      .state('tabsController.newsFeed', {
+      .state('tabsController.newsfeed', {
     url: '/newsfeed',
     views: {
       'tab1': {
-        templateUrl: 'templates/newsFeed.html',
-        controller: 'newsFeedCtrl'
+        templateUrl: 'templates/newsfeed.html',
+        controller: 'newsfeedCtrl'
+      }
+    }
+  })
+
+  .state('tabsController.volunteer', {
+    url: '/volunteer',
+    views: {
+      'tab2': {
+        templateUrl: 'templates/volunteer.html',
+        controller: 'volunteerCtrl'
       }
     }
   })
@@ -23,19 +33,9 @@ angular.module('app.routes', [])
   .state('tabsController.donate', {
     url: '/donate',
     views: {
-      'tab2': {
+      'tab3': {
         templateUrl: 'templates/donate.html',
         controller: 'donateCtrl'
-      }
-    }
-  })
-
-  .state('tabsController.userProfile', {
-    url: '/profile',
-    views: {
-      'tab3': {
-        templateUrl: 'templates/userProfile.html',
-        controller: 'userProfileCtrl'
       }
     }
   })
@@ -46,12 +46,36 @@ angular.module('app.routes', [])
     abstract:true
   })
 
-  .state('tabsController.volunteering', {
-    url: '/volunteering',
+  .state('about', {
+    url: '/about',
+    templateUrl: 'templates/about.html',
+    controller: 'aboutCtrl'
+  })
+
+  .state('contactInfo', {
+    url: '/contact',
+    templateUrl: 'templates/contactInfo.html',
+    controller: 'contactInfoCtrl'
+  })
+
+  .state('settings', {
+    url: '/settings',
+    templateUrl: 'templates/settings.html',
+    controller: 'settingsCtrl'
+  })
+
+  .state('login', {
+    url: '/login',
+    templateUrl: 'templates/login.html',
+    controller: 'loginCtrl'
+  })
+
+  .state('tabsController.confirmDonation', {
+    url: '/donationConfirmation',
     views: {
-      'tab4': {
-        templateUrl: 'templates/volunteering.html',
-        controller: 'volunteeringCtrl'
+      'tab3': {
+        templateUrl: 'templates/confirmDonation.html',
+        controller: 'confirmDonationCtrl'
       }
     }
   })
