@@ -14,11 +14,10 @@
           <span class="input-label">Passion</span>
           <select ng-model="mySelect" ng-change="testFunc(mySelect)" ng-options ="passion for passion in passions"></select>
         </label>
-
-
+        
       <label class="item item-select" id="donate-select3" name="charityDropdown">
           <span class="input-label">Charities</span>
-          <select ng-model="charitySelect" ng-options = "charity for charity in hashmap[mySelect]"> </select>
+          <select ng-model="charitySelect" ng-options="charity for charity in hashmap[mySelect]"> </select>
         </label>
 
       <label class="item item-input" id="donate-textarea1" name="donateComment">

@@ -1,4 +1,3 @@
-angular.module('starter.controllers', ['starter.services', 'ngOpenFB'])
 
 angular.module('app.controllers', [])
 
@@ -23,20 +22,6 @@ angular.module('app.controllers', [])
     });
   }
 ])
-
-.controller('AppCtrl', function ($scope, $ionicModal, $timeout, ngFB) {
-  $scope.fbLogin = function () {
-    ngFB.login({scope: 'email,read_stream,publish_actions'}).then(
-        function (response) {
-            if (response.status === 'connected') {
-                console.log('Facebook login succeeded');
-                $scope.closeLogin();
-            } else {
-                alert('Facebook login failed');
-            }
-        });
-  };
-})
 
 .controller('volunteerCtrl', ['$scope', '$stateParams', '$http', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
   // You can include any angular dependencies as parameters for this function
@@ -66,10 +51,13 @@ angular.module('app.controllers', [])
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
 function ($scope, $stateParams, $http) {
-  $scope.items = []
-    $http.get('data/donate_data.json').success(function(data) {
+  $scope.hashmap = {};
+  $scope.items = [];
+  $scope.passions = [];
+  $http.get('data/donate_data.json').success(function(data) {
       var set = new Set()
       var hashmap = {}
+      var bool = true;
       for (var i in data.donationcharities) {
         var item = {}
         item.values = data.donationcharities[i]
@@ -86,15 +74,20 @@ function ($scope, $stateParams, $http) {
         if(item.values.id+"" === $stateParams.charity+"") {
           $scope.mySelect = item.values.passion;
           $scope.charitySelect = item.str;
+          bool = false;
         }
-
         $scope.items.push(item)
       }
-
-      $scope.passions = Array.from(set)
-      $scope.hashmap = hashmap
+      console.log(set)
+      var newStupidArray = []
+      set.forEach(function(value) {
+        newStupidArray.push(value)
+      })
+      $scope.passions = newStupidArray;
+      $scope.hashmap = hashmap;
       console.log(hashmap)
       console.log($scope.passions)
+
     });
     $scope.testFunc = function(val) { console.log(val); $scope.charitySelect = $scope.hashmap[val][0] }
     $scope.selectedValue = 5;
@@ -159,12 +152,13 @@ function ($scope, $stateParams, $http) {
   }
 ])
 
-.controller('loginCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
+.controller('loginCtrl', ['$scope', '$stateParams', '$location', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
   // You can include any angular dependencies as parameters for this function
   // TIP: Access Route Parameters for your page via $stateParams.parameterName
-  function($scope, $stateParams) {
-
-
+  function($scope, $stateParams, $location) {
+    $scope.logIn = function() {
+      $location.url("templates/newsfeed.html");
+    }
   }
 ])
 
