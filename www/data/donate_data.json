@@ -1,0 +1,7 @@
+{
+  "donationcharities": [
+    {"id": 1, "charityName": "UNICEF", "fb_url": "https://www.facebook.com/unicef/", "passion" : "poverty"},
+    {"id": 2, "charityName": "Teach for America", "fb_url": "https://www.facebook.com/teachforamerica/", "passion" : "education"},
+    {"id": 3, "charityName": "Compassion International", "fb_url": "https://www.facebook.com/compassionintl/", "passion" : "equality"}
+  ]
+} 
