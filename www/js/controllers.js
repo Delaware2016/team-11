@@ -6,9 +6,10 @@ angular.module('app.controllers', [])
   function($scope, $stateParams, $http) {
     $scope.items = []
     $http.get('data/newsfeed_data.json').success(function(data) {
-      for (var i in data.array) {
+      console.log(data)
+      for (var i in data.newsfeed) {
         var item = {}
-        item.values = data.array[i]
+        item.values = data.newsfeed[i]
         item.str = "";
         if (item.values.donate) {
           item.str = item.values.name + " has donated " + item.values.value + " dollars to " + item.values.event_Name
