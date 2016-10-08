@@ -14,7 +14,7 @@
           <span class="input-label">Passion</span>
           <select ng-model="mySelect" ng-change="testFunc(mySelect)" ng-options ="passion for passion in passions"></select>
         </label>
-        
+
       <label class="item item-select" id="donate-select3" name="charityDropdown">
           <span class="input-label">Charities</span>
           <select ng-model="charitySelect" ng-options="charity for charity in hashmap[mySelect]"> </select>
@@ -25,6 +25,6 @@
         </label>
 
     </form>
-    <a ng-href="/#/page1/donationConfirmation/{{selectedValue}}/{{charitySelect}}" id="donate-button6" class="button button-positive  button-block">Confirm</a>
+    <button ng-click="confirm()" id="donate-button6" class="button button-positive  button-block">Confirm</button>
   </ion-content>
 </ion-view>
