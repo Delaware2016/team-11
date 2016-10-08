@@ -65,9 +65,9 @@ angular.module('app.routes', [])
   })
 
   .state('login', {
-    url: '/login',
-    templateUrl: 'templates/login.html',
-    controller: 'loginCtrl'
+      url: '/login',
+          templateUrl: 'templates/login.html',
+          controller: 'loginCtrl'
   })
 
   .state('tabsController.confirmDonation', {

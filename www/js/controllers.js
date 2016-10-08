@@ -6,7 +6,6 @@ angular.module('app.controllers', [])
   function($scope, $stateParams, $http) {
     $scope.items = []
     $http.get('data/newsfeed_data.json').success(function(data) {
-      console.log(data)
       for (var i in data.newsfeed) {
         var item = {}
         item.values = data.newsfeed[i]
