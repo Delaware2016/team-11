@@ -1,6 +1,6 @@
 {
   "volunteeringevents": [
-    {"id": 1, "event_Name": "Soup Kitchen for Veterans", "timeOf": "9:00 am - 6:00 pm", "date": "November 7, 2016", "fb_url" : "fbex.url"},
+    {"id": 1, "event_Name": "Soup Kitchen for Veterans", "timeOf": "9:00 am - 6:00 pm", "date": "November 7, 2016", "fb_url" : "https://www.facebook.com/events/154626448328976/"},
     {"id": 2, "event_Name": "5th Annual Anti-Bullying/Gay Straight Alliance Summit", "timeOf": "12:00 am - 12:00 pm", "date": "October 29, 2016", "fb_url" : "https://www.facebook.com/events/680012762146182/"},
     {"id": 3, "event_Name": "3rd Grader Book Drive", "timeOf": "12:00 am - 4:30 pm", "date": "November 15, 2016", "fb_url" : "https://www.facebook.com/events/788197811320216/"}
   ]
