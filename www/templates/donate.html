@@ -1,3 +1,27 @@
-<ion-view title="Donate" id="page3">
-    <ion-content padding="true" class="has-header"></ion-content>
+<ion-view title="Donate" id="page4">
+    <ion-content padding="true" class="has-header">
+        <div id="donate-button-bar1" class="button-bar">
+            <button id="donate-button3" class="button button-positive  button-block">$5</button>
+            <button id="donate-button4" class="button button-positive  button-block">$50</button>
+            <button id="donate-button5" class="button button-positive  button-block">$100</button>
+        </div>
+        <form id="donate-form4" class="list">
+            <label class="item item-select" id="donate-select2" name="passionDropdown">
+                <span class="input-label">Passion</span>
+                <select>
+                    <option>Poverty</option>
+                    <option>Education</option>
+                    <option>Homelessness</option>
+                </select>
+            </label>
+            <label class="item item-select" id="donate-select3" name="charityDropdown">
+                <span class="input-label">Charities</span>
+                <select></select>
+            </label>
+            <label class="item item-input" id="donate-textarea1" name="donateComment">
+                <span class="input-label"></span><textarea placeholder="Leave a comment"></textarea>
+            </label>
+        </form>
+        <a ui-sref="tabsController.confirmDonation" id="donate-button6" class="button button-positive  button-block">Confirm</a>
+    </ion-content>
 </ion-view>
