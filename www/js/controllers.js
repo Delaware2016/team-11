@@ -62,7 +62,7 @@ function ($scope, $stateParams, $http) {
         $scope.items.push(item)
       }
     });
-    
+
 }])
 
 .controller('menuCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
@@ -101,12 +101,13 @@ function ($scope, $stateParams, $http) {
   }
 ])
 
-.controller('loginCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
+.controller('loginCtrl', ['$scope', '$stateParams','$location', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
   // You can include any angular dependencies as parameters for this function
   // TIP: Access Route Parameters for your page via $stateParams.parameterName
-  function($scope, $stateParams) {
-
-
+  function($scope, $stateParams, $location) {
+      $scope.logIn = function() {
+          $location.url("templates/newsfeed.html");
+      }
   }
 ])
 
