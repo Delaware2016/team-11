@@ -9,7 +9,7 @@
         <h1 class="title">Volunteer events near you</h1>
         <ion-list>
   			<ion-item ng-repeat="item in items | filter:searchText">
-    			{{item.str}}
+    			{{item.name}} Date: {{item.date}}
   			</ion-item>
 		</ion-list>
 	</ion-content>

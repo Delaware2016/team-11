@@ -4,7 +4,7 @@
       <ion-item ng-repeat="item in items">
         <div class="card">
           <div class="item item-text-wrap">
-            <a href="#/page1/donate" class="item item-icon-right">
+            <a ng-href="#/page1/donate/{{item.values.id}}" class="item item-icon-right">
               <i class="icon ion-home"></i>
               {{item.str}}
             </a>
