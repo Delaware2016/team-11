@@ -1,0 +1,7 @@
+{
+  "array": [
+    {"id": 1, "name": "John", "value": "10", "donate": true, "event_Name": "Dog Charity"},
+    {"id": 2, "name": "Sally", "value": "5", "donate": false, "event_Name": "Soup Kitchen for Veterans"},
+    {"id": 3, "name": "Adam", "value": "10000", "donate": true, "event_Name": "Poverty Charity"}
+  ]
+}

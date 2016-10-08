@@ -1,3 +1,17 @@
 <ion-view title="NewsFeed" id="page2">
-    <ion-content padding="true" class="has-header"></ion-content>
+  <ion-content padding="true" class="has-header" ng-controller="newsFeedCtrl">
+    <ion-list>
+      <ion-item ng-repeat="item in items">
+        <div class="card">
+          <div class="item item-text-wrap">
+            <a href="#/page1/donate" class="item item-icon-right">
+              <i class="icon ion-home"></i>
+              {{item.str}}
+            </a>
+          </div>
+        </div>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+
 </ion-view>
