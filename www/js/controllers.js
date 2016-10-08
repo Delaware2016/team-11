@@ -37,7 +37,7 @@ angular.module('app.controllers', [])
         item.name = item.values.event_Name
         item.date = item.values.date
         item.time = item.values.timeOf
-
+        item.fb = item.values.fb_url
 
         console.log(item)
         $scope.items.push(item)

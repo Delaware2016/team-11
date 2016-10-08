@@ -1,16 +1,17 @@
 <ion-view title="Volunteer" id="page3">
     <ion-content padding="true" class="has-header" ng-controller="volunteerCtrl">
-	<form id="volunteering-form1" class="list">
+	   <form id="volunteering-form1" class="list">
             <label class="item item-input">
                 <i class="icon ion-search placeholder-icon"></i>
                 <input type="search" placeholder="Enter an organization" ng-model="searchText">
             </label>
         </form>
         <h1 class="title">Volunteer events near you</h1>
-        <ion-list>
-  			<ion-item ng-repeat="item in items | filter:searchText">
-    			{{item.name}} Date: {{item.date}}
-  			</ion-item>
+        <ion-list ng-repeat="item in items | filter:searchText">
+            <a class="button icon icon-right ion-chevron-right" href={{item.fb}}> {{item.name}}</a>
+    			 
+
 		</ion-list>
+
 	</ion-content>
 </ion-view>
