@@ -1,7 +1,7 @@
 {
   "newsfeed": [
-    {"id": 1, "name": "John", "value": "10", "donate": true, "event_Name": "Soup Kitchen for Veterans", "picture_file": "pic1.png", "fb_url": "fbex.url"},
-    {"id": 2, "name": "Sally", "value": "5", "donate": false, "event_Name": "5th Annual Anti-Bullying/Gay Straight Alliance Summit","picture_file": "pic1.png", "fb_url": "fbex.url"},
-    {"id": 3, "name": "Adam", "value": "10000", "donate": true, "event_Name": "3rd Grader Book Drive","picture_file": "pic1.png", "fb_url": "https://www.facebook.com/events/788197811320216/"}
+    {"id": 1, "name": "John", "value": "10", "donate": true, "event_Name": "Soup Kitchen for Veterans", "picture_file": "soupKitchen.jpg", "fb_url": "https://www.facebook.com/events/154626448328976/"},
+    {"id": 2, "name": "Sally", "value": "5", "donate": false, "event_Name": "5th Annual Anti-Bullying/Gay Straight Alliance Summit","picture_file": "lgbt.jpg", "fb_url": "https://www.facebook.com/events/680012762146182/"},
+    {"id": 3, "name": "Adam", "value": "10000", "donate": true, "event_Name": "3rd Grader Book Drive","picture_file": "bookdrive.jpg", "fb_url": "https://www.facebook.com/events/788197811320216/"}
   ]
 }
